@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IngenetModelStoreContainer" CdmEntityContainer="IngenetEntities">
+    <EntitySetMapping Name="Estadisticas">
+      <EntityTypeMapping TypeName="IngenetModel.Estadistica">
+        <MappingFragment StoreEntitySet="Estadisticas">
+          <ScalarProperty Name="EstadisticaID" ColumnName="EstadisticaID" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="PreguntasRealizadas" ColumnName="PreguntasRealizadas" />
+          <ScalarProperty Name="RespuestasRealizadas" ColumnName="RespuestasRealizadas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Preguntas">
+      <EntityTypeMapping TypeName="IngenetModel.Pregunta">
+        <MappingFragment StoreEntitySet="Preguntas">
+          <ScalarProperty Name="PreguntaID" ColumnName="PreguntaID" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="TituloPregunta" ColumnName="TituloPregunta" />
+          <ScalarProperty Name="ContenidoPregunta" ColumnName="ContenidoPregunta" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Respuestas">
+      <EntityTypeMapping TypeName="IngenetModel.Respuesta">
+        <MappingFragment StoreEntitySet="Respuestas">
+          <ScalarProperty Name="ContenidoRespuesta" ColumnName="ContenidoRespuesta" />
+          <ScalarProperty Name="RespuestaID" ColumnName="RespuestaID" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="PreguntaID" ColumnName="PreguntaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temas">
+      <EntityTypeMapping TypeName="IngenetModel.Tema">
+        <MappingFragment StoreEntitySet="Temas">
+          <ScalarProperty Name="TemaID" ColumnName="TemaID" />
+          <ScalarProperty Name="NombreTema" ColumnName="NombreTema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IngenetModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Cotraseña" ColumnName="Cotraseña" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Ocupacion" ColumnName="Ocupacion" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PreguntaTemas" TypeName="IngenetModel.PreguntaTemas" StoreEntitySet="PreguntaTemas">
+      <EndProperty Name="Preguntas">
+        <ScalarProperty Name="PreguntaID" ColumnName="PreguntaID" />
+      </EndProperty>
+      <EndProperty Name="Temas">
+        <ScalarProperty Name="TemaID" ColumnName="TemaID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
