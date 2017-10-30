@@ -1,0 +1,226 @@
+﻿@model  Entities.Usuario
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+    @Html.AntiForgeryToken()
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN VALIDATION STATES-->
+        <div class="portlet light portlet-fit portlet-form bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" fa fa-user "></i>
+                    <span class="caption-subject font-dark sbold uppercase">Registro de usuario</span>
+                </div>
+                <div class="actions">
+                    <div class="btn-group btn-group-devided" data-toggle="buttons">
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
+                            <input type="radio" name="options" class="toggle" id="option1">Actions
+                        </label>
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option2">Settings
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <!-- BEGIN FORM-->
+                <form action="#" id="form_sample_3" class="form-horizontal">
+                    <div class="form-body">
+                        <div class="alert alert-danger display-hide">
+                            <button class="close" data-close="alert"></button> You have some form errors. Please check below.
+                        </div>
+                        <div class="alert alert-success display-hide">
+                            <button class="close" data-close="alert"></button> Your form validation is successful!
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                Nombre(s)
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" , required = "required" ,name="name"} })
+                                @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                Apellido paterno
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.ApellidoPaterno, new { htmlAttributes = new { @class = "form-control", required = "required", name = "name" } })
+                                @Html.ValidationMessageFor(model => model.ApellidoPaterno, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                Apellido materno
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.ApellidoMaterno, new { htmlAttributes = new { @class = "form-control", required = "required", name = "name" } })
+                                @Html.ValidationMessageFor(model => model.ApellidoMaterno, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                Sexo
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <div class="mt-radio-list" data-error-container="#form_2_membership_error">
+                                    <label class="mt-radio">
+                                        <input type="radio" name="membership" value="1" /> Mujer
+                                        <span></span>
+                                    </label>
+                                    <label class="mt-radio">
+                                        <input type="radio" name="membership" value="2" /> Hombre
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div id="form_2_membership_error"> </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Fecha de nacimiento</label>
+                            <div class="col-md-4">
+                                <div class="input-group date date-picker" data-date-format="dd-mm-yyyy">
+                                    <input type="text" class="form-control" readonly name="datepicker">
+                                    <span class="input-group-btn">
+                                        <button class="btn default" type="button">
+                                            <i class="fa fa-calendar"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <!-- /input-group -->
+                                <span class="help-block">Selecciona una fecha</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                Carrera:
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <select class="form-control select2me" name="options2">
+                                    <option value="">Select...</option>
+                                    <option value="Option 1">Ingenieria en Sistemas</option>
+                                    <option value="Option 2">Ingenieria en Electrónica</option>
+                                    <option value="Option 3">Ingenieria en Computación</option>
+                                    <option value="Option 4">Ingenieria Mecánica</option>
+                                    <option value="Option 5">Ingenieria Naval</option>
+                                    <option value="Option 6">Ingenieria en Mecatrónica</option>
+                                    <option value="Option 7">Ingenieria Civil</option>
+                                    <option value="Option 8">Ingenieria en Mecánica</option>
+                                    <option value="Option 9">Ingenieria Electromecánica</option>
+                                    <option value="Option 10">Ingenieria Empresarial</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                Ocupación:
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <select class="form-control select2me" name="options2">
+                                    <option value="">Select...</option>
+                                    <option value="Option 1">Docente</option>
+                                    <option value="Option 2">Estudiante</option>
+                                    <option value="Option 3">Empleado</option>
+                                    <option value="Option 4">Jefe de departamento</option>
+                                    <option value="Option 5">Lider de proyecto</option>
+                                    <option value="Option 6">Programador</option>
+                                    <option value="Option 7">Diseñador</option>
+                                    <option value="Option 8">Desarrollador de software</option>
+                                    <option value="Option 9">Tecnico</option>
+                                    <option value="Option 10">Novato</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                Correo electronico
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <input type="email" name="email" class="form-control" placeholder="E-mail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                Nombre de usuario (alias)
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", required = "required", name = "name" } })
+                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                contraseña
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.Cotraseña, new { htmlAttributes = new { @class = "form-control", required = "required", name = "name" } })
+                                @Html.ValidationMessageFor(model => model.Cotraseña, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                Descripcion
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-9">
+                                <textarea class="wysihtml5 form-control" rows="6" name="editor1" data-error-container="#editor1_error"></textarea>
+                                <div id="editor1_error"> </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn green">Registrarse</button>
+                                <button type="button" class="btn default">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- END FORM-->
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+</div>
+
+                
+       
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/select2.full.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/additional-methods.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/wysihtml5-0.3.0.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap-wysihtml5.js" type="text/javascript"></script>
+    <script src="~/Scripts/ckeditor.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap-markdown.js" type="text/javascript"></script>
+    <script src="~/Scripts/markdown.js" type="text/javascript"></script>
+    <script src="~/Scripts/form-validation.min.js" type="text/javascript"></script>
+}
