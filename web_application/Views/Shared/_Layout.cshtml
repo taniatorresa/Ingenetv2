@@ -17,6 +17,14 @@
     <link href="~/Content/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
     <link href="~/Content/datatables.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/select2.css" rel="stylesheet" type="text/css" /> 
+    <link href="~/Content/select2-bootstrap.min.css" rel="stylesheet" type="text/css" /> 
+    <link href="~/Content/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" /> 
+    <link href="~/Content/bootstrap-wysihtml5.css" rel="stylesheet" type="text/css" /> 
+    <link href="~/Content/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
+    <!--Formulario-->
+    <link href="~/Content/bootstrap-switch.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/editor.css" rel="stylesheet" type="text/css" />
     <!-- Layout -->
     <link href="~/Content/layout.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
@@ -38,7 +46,7 @@
             <div class="page-header-inner ">
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
-                    <img src="~/img/ingenet_small_3.png" alt="logo" class="logo-default" /> </a>
+                    <img src="~/img/ingenet_small_5.png" alt="logo" class="logo-default" /> </a>
                     <div class="menu-toggler sidebar-toggler">
                         <span></span>
                     </div>
@@ -487,8 +495,7 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="ui_metronic_grid.html" class="nav-link ">
-                                        <span class="title">Metronic Grid System</span>
+                                    @Html.ActionLink("Usuario", "Create", "Usuario")
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
@@ -762,6 +769,7 @@
     <script src="~/Scripts/datatables.min.js" type="text/javascript"></script>
     <script src="~/Scripts/datatables.bootstrap.js" type="text/javascript"></script>
     <script src="~/Scripts/table-datatables-fixedheader.js" type="text/javascript"></script>
+    <script src="~/Scripts/config.js" type="text/javascript"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

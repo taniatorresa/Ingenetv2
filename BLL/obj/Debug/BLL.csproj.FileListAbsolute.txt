@@ -9,3 +9,17 @@ C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\BLL\bin\Debug\En
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\BLL\obj\Debug\BLL.dll
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\BLL\obj\Debug\BLL.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\BLL.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\BLL.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\DAL.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\Entities.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\EntityFramework.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\DAL.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\DAL.dll.config
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\Entities.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\Entities.dll.config
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\bin\Debug\EntityFramework.xml
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\obj\Debug\BLL.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\Ingenet_V1.0\ingenet\BLL\obj\Debug\BLL.pdb
