@@ -10,7 +10,7 @@
             <PropertyRef Name="EstadisticaID" />
           </Key>
           <Property Name="EstadisticaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UsuarioID" Type="int" Nullable="false" />
+          <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PreguntasRealizadas" Type="int" Nullable="false" />
           <Property Name="RespuestasRealizadas" Type="int" Nullable="false" />
         </EntityType>
@@ -19,7 +19,7 @@
             <PropertyRef Name="PreguntaID" />
           </Key>
           <Property Name="PreguntaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UsuarioID" Type="int" Nullable="false" />
+          <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TituloPregunta" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ContenidoPregunta" Type="varchar(max)" Nullable="false" />
           <Property Name="Estado" Type="bit" Nullable="false" />
@@ -38,7 +38,7 @@
           </Key>
           <Property Name="RespuestaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ContenidoRespuesta" Type="varchar(max)" Nullable="false" />
-          <Property Name="UsuarioID" Type="int" Nullable="false" />
+          <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PreguntaID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Temas">
@@ -52,7 +52,7 @@
           <Key>
             <PropertyRef Name="UsuarioID" />
           </Key>
-          <Property Name="UsuarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Rol" Type="bit" Nullable="false" />
           <Property Name="Nombres" Type="varchar" MaxLength="50" Nullable="false" />
@@ -178,7 +178,7 @@
             <PropertyRef Name="EstadisticaID" />
           </Key>
           <Property Name="EstadisticaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+          <Property Name="UsuarioID" Type="String" Nullable="false" />
           <Property Name="PreguntasRealizadas" Type="Int32" Nullable="false" />
           <Property Name="RespuestasRealizadas" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Estadisticas" ToRole="Usuarios" />
@@ -188,7 +188,7 @@
             <PropertyRef Name="PreguntaID" />
           </Key>
           <Property Name="PreguntaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+          <Property Name="UsuarioID" Type="String" Nullable="false" />
           <Property Name="TituloPregunta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ContenidoPregunta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Boolean" Nullable="false" />
@@ -201,7 +201,7 @@
             <PropertyRef Name="RespuestaID" />
           </Key>
           <Property Name="RespuestaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+          <Property Name="UsuarioID" Type="String" Nullable="false" />
           <Property Name="PreguntaID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Pregunta" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Respuestas" ToRole="Preguntas" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Respuesta_Usuario" FromRole="Respuestas" ToRole="Usuarios" />
@@ -219,7 +219,7 @@
           <Key>
             <PropertyRef Name="UsuarioID" />
           </Key>
-          <Property Name="UsuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UsuarioID" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Rol" Type="Boolean" Nullable="false" />
           <Property Name="Nombres" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />

@@ -15,7 +15,7 @@ namespace Entities
     public partial class Respuesta
     {
         public int RespuestaID { get; set; }
-        public int UsuarioID { get; set; }
+        public string UsuarioID { get; set; }
         public int PreguntaID { get; set; }
         public string ContenidoRespuesta { get; set; }
     

@@ -22,7 +22,7 @@ namespace Entities
         }
     
         public int PreguntaID { get; set; }
-        public int UsuarioID { get; set; }
+        public string UsuarioID { get; set; }
         public string TituloPregunta { get; set; }
         public string ContenidoPregunta { get; set; }
         public bool Estado { get; set; }

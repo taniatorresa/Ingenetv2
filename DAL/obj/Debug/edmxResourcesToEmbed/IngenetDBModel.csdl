@@ -5,7 +5,7 @@
       <PropertyRef Name="EstadisticaID" />
     </Key>
     <Property Name="EstadisticaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+    <Property Name="UsuarioID" Type="String" Nullable="false" />
     <Property Name="PreguntasRealizadas" Type="Int32" Nullable="false" />
     <Property Name="RespuestasRealizadas" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Estadisticas" ToRole="Usuarios" />
@@ -15,7 +15,7 @@
       <PropertyRef Name="PreguntaID" />
     </Key>
     <Property Name="PreguntaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+    <Property Name="UsuarioID" Type="String" Nullable="false" />
     <Property Name="TituloPregunta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ContenidoPregunta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Estado" Type="Boolean" Nullable="false" />
@@ -28,7 +28,7 @@
       <PropertyRef Name="RespuestaID" />
     </Key>
     <Property Name="RespuestaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+    <Property Name="UsuarioID" Type="String" Nullable="false" />
     <Property Name="PreguntaID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Pregunta" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Respuestas" ToRole="Preguntas" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Respuesta_Usuario" FromRole="Respuestas" ToRole="Usuarios" />
@@ -46,7 +46,7 @@
     <Key>
       <PropertyRef Name="UsuarioID" />
     </Key>
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioID" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Rol" Type="Boolean" Nullable="false" />
     <Property Name="Nombres" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />

@@ -15,7 +15,7 @@ namespace Entities
     public partial class Estadistica
     {
         public int EstadisticaID { get; set; }
-        public int UsuarioID { get; set; }
+        public string UsuarioID { get; set; }
         public int PreguntasRealizadas { get; set; }
         public int RespuestasRealizadas { get; set; }
     

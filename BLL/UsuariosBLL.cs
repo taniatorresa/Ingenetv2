@@ -23,7 +23,7 @@ namespace BLL
                 }
                 else
                 {
-                    throw (new Exception("La categoría ya existe"));
+                    throw (new Exception("El usuario ya existe"));
                 }
             }
             return Result;
@@ -49,7 +49,7 @@ namespace BLL
             return Result;
         }
 
-        public Usuario Retrieve(int id)
+        public Usuario Retrieve(string id)
         {
             Usuario Result = null;
             using (var r = new Repository<Usuario>())
@@ -69,7 +69,7 @@ namespace BLL
             return Result;
         }
 
-        public bool Delete(int id)
+        public bool Delete(string id)
         {
             bool Result = false;
             var usuario = Retrieve(id);

@@ -22,7 +22,7 @@ namespace Entities
             this.Respuestas = new HashSet<Respuesta>();
         }
     
-        public int UsuarioID { get; set; }
+        public string UsuarioID { get; set; }
         public string UserName { get; set; }
         public bool Rol { get; set; }
         public string Nombres { get; set; }

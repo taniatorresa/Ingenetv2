@@ -5,7 +5,7 @@
       <PropertyRef Name="EstadisticaID" />
     </Key>
     <Property Name="EstadisticaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="PreguntasRealizadas" Type="int" Nullable="false" />
     <Property Name="RespuestasRealizadas" Type="int" Nullable="false" />
   </EntityType>
@@ -14,7 +14,7 @@
       <PropertyRef Name="PreguntaID" />
     </Key>
     <Property Name="PreguntaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="TituloPregunta" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ContenidoPregunta" Type="varchar(max)" Nullable="false" />
     <Property Name="Estado" Type="bit" Nullable="false" />
@@ -33,7 +33,7 @@
     </Key>
     <Property Name="RespuestaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ContenidoRespuesta" Type="varchar(max)" Nullable="false" />
-    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="PreguntaID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Temas">
@@ -47,7 +47,7 @@
     <Key>
       <PropertyRef Name="UsuarioID" />
     </Key>
-    <Property Name="UsuarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Rol" Type="bit" Nullable="false" />
     <Property Name="Nombres" Type="varchar" MaxLength="50" Nullable="false" />

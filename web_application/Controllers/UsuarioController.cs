@@ -47,7 +47,7 @@ namespace web_application.Controllers
             }
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
             UsuariosBLL oBLL = new UsuariosBLL();
             Usuario usuario = oBLL.Retrieve(id);
@@ -80,7 +80,7 @@ namespace web_application.Controllers
             }
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
             UsuariosBLL oBLL = new UsuariosBLL();
             Usuario usuario = oBLL.Retrieve(id);
@@ -88,7 +88,7 @@ namespace web_application.Controllers
             return View(usuario);
         }
 
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
 
             UsuariosBLL oBLL = new UsuariosBLL();
