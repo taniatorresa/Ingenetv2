@@ -30,7 +30,7 @@ namespace Entities
         public string ApellidoMaterno { get; set; }
         public string Cotraseña { get; set; }
         public Nullable<bool> Sexo { get; set; }
-        public bool Ocupacion { get; set; }
+        public int Ocupacion { get; set; }
         public string Carrera { get; set; }
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
         public string Descripción { get; set; }
