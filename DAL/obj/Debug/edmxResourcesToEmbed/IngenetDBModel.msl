@@ -43,13 +43,13 @@
     <EntitySetMapping Name="Usuarios">
       <EntityTypeMapping TypeName="IngenetModel.Usuario">
         <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
           <ScalarProperty Name="Nombres" ColumnName="Nombres" />
           <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="Rol" ColumnName="Rol" />
           <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
           <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
-          <ScalarProperty Name="Cotraseña" ColumnName="Cotraseña" />
           <ScalarProperty Name="Sexo" ColumnName="Sexo" />
           <ScalarProperty Name="Ocupacion" ColumnName="Ocupacion" />
           <ScalarProperty Name="Carrera" ColumnName="Carrera" />

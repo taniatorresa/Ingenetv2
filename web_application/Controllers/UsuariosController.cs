@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 namespace web_application.Controllers
 {
-    public class UsuarioController : Controller
+    public class UsuariosController : Controller
     {
         // GET: Usuario
         public ActionResult Index()

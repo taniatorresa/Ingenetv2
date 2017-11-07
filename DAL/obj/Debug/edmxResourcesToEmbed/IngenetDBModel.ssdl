@@ -49,12 +49,12 @@
     </Key>
     <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Rol" Type="bit" Nullable="false" />
+    <Property Name="Rol" Type="int" Nullable="false" />
     <Property Name="Nombres" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
     <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
-    <Property Name="Cotraseña" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Sexo" Type="bit" />
+    <Property Name="Contraseña" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sexo" Type="int" />
     <Property Name="Ocupacion" Type="int" Nullable="false" />
     <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="FechaNacimiento" Type="date" />

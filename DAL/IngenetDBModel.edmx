@@ -54,12 +54,12 @@
           </Key>
           <Property Name="UsuarioID" Type="varchar" MaxLength="50" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Rol" Type="bit" Nullable="false" />
+          <Property Name="Rol" Type="int" Nullable="false" />
           <Property Name="Nombres" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
           <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
-          <Property Name="Cotraseña" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Sexo" Type="bit" />
+          <Property Name="Contraseña" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Sexo" Type="int" />
           <Property Name="Ocupacion" Type="int" Nullable="false" />
           <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="FechaNacimiento" Type="date" />
@@ -221,12 +221,11 @@
           </Key>
           <Property Name="UsuarioID" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Rol" Type="Boolean" Nullable="false" />
+          <Property Name="Rol" Type="Int32" Nullable="false" />
           <Property Name="Nombres" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Cotraseña" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Sexo" Type="Boolean" />
+          <Property Name="Sexo" Type="Int32" />
           <Property Name="Ocupacion" Type="Int32" Nullable="false" />
           <Property Name="Carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
@@ -234,6 +233,7 @@
           <NavigationProperty Name="Estadisticas" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Usuarios" ToRole="Estadisticas" />
           <NavigationProperty Name="Preguntas" Relationship="Self.FK_Pregunta_Usuario" FromRole="Usuarios" ToRole="Preguntas" />
           <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuesta_Usuario" FromRole="Usuarios" ToRole="Respuestas" />
+          <Property Name="Contraseña" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Estadisticas_Usuarios">
           <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
@@ -362,13 +362,13 @@
           <EntitySetMapping Name="Usuarios">
             <EntityTypeMapping TypeName="IngenetModel.Usuario">
               <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
                 <ScalarProperty Name="Nombres" ColumnName="Nombres" />
                 <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Rol" ColumnName="Rol" />
                 <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
                 <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
-                <ScalarProperty Name="Cotraseña" ColumnName="Cotraseña" />
                 <ScalarProperty Name="Sexo" ColumnName="Sexo" />
                 <ScalarProperty Name="Ocupacion" ColumnName="Ocupacion" />
                 <ScalarProperty Name="Carrera" ColumnName="Carrera" />

@@ -7,3 +7,4 @@ C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\bin\Deb
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\obj\Debug\Entities.dll
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\obj\Debug\Entities.pdb
+C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache

@@ -43,7 +43,7 @@ namespace BLL
                 }
                 else
                 {
-                    throw (new Exception("La categoría ya existe"));
+                    throw (new Exception("Ya existe este nombre de Usuario"));
                 }
             }
             return Result;

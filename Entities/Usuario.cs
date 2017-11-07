@@ -24,16 +24,16 @@ namespace Entities
     
         public string UsuarioID { get; set; }
         public string UserName { get; set; }
-        public bool Rol { get; set; }
+        public int Rol { get; set; }
         public string Nombres { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
-        public string Cotraseña { get; set; }
-        public Nullable<bool> Sexo { get; set; }
+        public Nullable<int> Sexo { get; set; }
         public int Ocupacion { get; set; }
         public string Carrera { get; set; }
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
         public string Descripción { get; set; }
+        public string Contraseña { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Estadistica> Estadisticas { get; set; }
