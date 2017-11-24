@@ -10,3 +10,5 @@ C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\DAL\bin\Debug\En
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\DAL\obj\Debug\DAL.dll
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\DAL\obj\Debug\DAL.pdb
+C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\DAL\bin\Debug\Entities.dll.config

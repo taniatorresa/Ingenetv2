@@ -5,7 +5,7 @@
       <PropertyRef Name="EstadisticaID" />
     </Key>
     <Property Name="EstadisticaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
     <Property Name="PreguntasRealizadas" Type="Int32" Nullable="false" />
     <Property Name="RespuestasRealizadas" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Estadisticas" ToRole="Usuarios" />
@@ -15,7 +15,7 @@
       <PropertyRef Name="PreguntaID" />
     </Key>
     <Property Name="PreguntaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
     <Property Name="TituloPregunta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ContenidoPregunta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Estado" Type="Boolean" Nullable="false" />
@@ -28,11 +28,11 @@
       <PropertyRef Name="RespuestaID" />
     </Key>
     <Property Name="RespuestaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContenidoRespuesta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
     <Property Name="PreguntaID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Pregunta" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Respuestas" ToRole="Preguntas" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Respuesta_Usuario" FromRole="Respuestas" ToRole="Usuarios" />
-    <Property Name="ContenidoRespuesta" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Tema">
     <Key>
@@ -46,21 +46,23 @@
     <Key>
       <PropertyRef Name="UsuarioID" />
     </Key>
-    <Property Name="UsuarioID" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Rol" Type="Int32" Nullable="false" />
-    <Property Name="Nombres" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Rol" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Sexo" Type="Int32" />
     <Property Name="Ocupacion" Type="Int32" Nullable="false" />
     <Property Name="Carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
     <Property Name="Descripción" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estatus" Type="Int32" />
     <NavigationProperty Name="Estadisticas" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Usuarios" ToRole="Estadisticas" />
     <NavigationProperty Name="Preguntas" Relationship="Self.FK_Pregunta_Usuario" FromRole="Usuarios" ToRole="Preguntas" />
     <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuesta_Usuario" FromRole="Usuarios" ToRole="Respuestas" />
-    <Property Name="Contraseña" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK_Estadisticas_Usuarios">
     <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
