@@ -66,27 +66,17 @@
     <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="IngenetDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>IngenetDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="IngenetDBModel.edmx.diagram">
       <DependentUpon>IngenetDBModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="IngenetDBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IngenetDBModel.edmx</DependentUpon>
-      <LastGenOutput>IngenetDBModel.Context.cs</LastGenOutput>
-      <CustomToolNamespace>Entities</CustomToolNamespace>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -96,6 +86,14 @@
       <Project>{0deb25d3-7fb2-4c43-a9af-58af3a0ae804}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IngenetDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IngenetDBModel.edmx</DependentUpon>
+      <LastGenOutput>IngenetDBModel.Context.cs</LastGenOutput>
+      <CustomToolNamespace>Entities</CustomToolNamespace>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

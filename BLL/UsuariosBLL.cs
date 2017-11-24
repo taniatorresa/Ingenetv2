@@ -35,7 +35,7 @@ namespace BLL
             using (var r = new Repository<Usuario>())
             {
                 Usuario tmp = r.Retrieve(
-                    p => p.UserName== usuario.UserName &&
+                    p => p.UserName == usuario.UserName &&
                     p.UsuarioID != usuario.UsuarioID);
                 if (tmp == null)
                 {
@@ -43,13 +43,14 @@ namespace BLL
                 }
                 else
                 {
-                    throw (new Exception("Ya existe este nombre de Usuario"));
+                    throw (new Exception("El usuario ya existe"));
                 }
             }
             return Result;
         }
 
-        public Usuario Retrieve(string id)
+
+        public Usuario Retrieve(int id)
         {
             Usuario Result = null;
             using (var r = new Repository<Usuario>())
@@ -69,7 +70,7 @@ namespace BLL
             return Result;
         }
 
-        public bool Delete(string id)
+        public bool Delete(int id)
         {
             bool Result = false;
             var usuario = Retrieve(id);

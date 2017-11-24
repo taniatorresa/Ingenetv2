@@ -25,8 +25,8 @@
     <EntitySetMapping Name="Respuestas">
       <EntityTypeMapping TypeName="IngenetModel.Respuesta">
         <MappingFragment StoreEntitySet="Respuestas">
-          <ScalarProperty Name="ContenidoRespuesta" ColumnName="ContenidoRespuesta" />
           <ScalarProperty Name="RespuestaID" ColumnName="RespuestaID" />
+          <ScalarProperty Name="ContenidoRespuesta" ColumnName="ContenidoRespuesta" />
           <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
           <ScalarProperty Name="PreguntaID" ColumnName="PreguntaID" />
         </MappingFragment>
@@ -43,18 +43,20 @@
     <EntitySetMapping Name="Usuarios">
       <EntityTypeMapping TypeName="IngenetModel.Usuario">
         <MappingFragment StoreEntitySet="Usuarios">
-          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
-          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
           <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
           <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
           <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
           <ScalarProperty Name="Sexo" ColumnName="Sexo" />
           <ScalarProperty Name="Ocupacion" ColumnName="Ocupacion" />
           <ScalarProperty Name="Carrera" ColumnName="Carrera" />
           <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
           <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

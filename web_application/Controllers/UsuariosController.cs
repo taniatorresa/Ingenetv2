@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 namespace web_application.Controllers
 {
-    public class UsuariosController : Controller
+    public class UsuarioController : Controller
     {
         // GET: Usuario
         public ActionResult Index()
@@ -21,6 +21,7 @@ namespace web_application.Controllers
         {
             return View();
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -46,8 +47,7 @@ namespace web_application.Controllers
                 return View(usuario);
             }
         }
-
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int id)
         {
             UsuariosBLL oBLL = new UsuariosBLL();
             Usuario usuario = oBLL.Retrieve(id);
@@ -80,7 +80,7 @@ namespace web_application.Controllers
             }
         }
 
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
             UsuariosBLL oBLL = new UsuariosBLL();
             Usuario usuario = oBLL.Retrieve(id);
@@ -88,7 +88,7 @@ namespace web_application.Controllers
             return View(usuario);
         }
 
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int id)
         {
 
             UsuariosBLL oBLL = new UsuariosBLL();

@@ -428,3 +428,6 @@ C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\obj\Debug\web_application.csprojResolveAssemblyReference.cache
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\obj\Debug\web_application.dll
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\obj\Debug\web_application.pdb
+C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\bin\Entities.dll.config
+C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\bin\DAL.dll.config
+C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\obj\Debug\web_application.csproj.CoreCompileInputs.cache

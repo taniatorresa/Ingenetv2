@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MyAppWebStore.Controllers
+namespace web_application.Controllers
 {
     public class TemasController : Controller
     {
