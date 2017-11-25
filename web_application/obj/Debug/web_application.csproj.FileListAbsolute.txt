@@ -431,3 +431,6 @@ C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\bin\Entities.dll.config
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\bin\DAL.dll.config
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\web_application\obj\Debug\web_application.csproj.CoreCompileInputs.cache
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\web_application\bin\Entities.dll.config
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\web_application\bin\DAL.dll.config
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\web_application\obj\Debug\web_application.csproj.CoreCompileInputs.cache

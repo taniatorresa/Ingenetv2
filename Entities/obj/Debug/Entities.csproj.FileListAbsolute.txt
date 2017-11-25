@@ -9,3 +9,14 @@ C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\obj\Deb
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\obj\Debug\Entities.pdb
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
 C:\Users\tania\Documents\Septimo Semestre\base de datos\Ingenet\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\bin\Debug\Entities.dll.config
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\bin\Debug\Entities.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\bin\Debug\Entities.pdb
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\bin\Debug\EntityFramework.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\bin\Debug\EntityFramework.xml
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\obj\Debug\Entities.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\Entities\obj\Debug\Entities.pdb

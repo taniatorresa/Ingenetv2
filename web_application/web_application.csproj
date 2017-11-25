@@ -187,6 +187,8 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
     <Content Include="Views\Preguntas\Create.cshtml" />
+    <Content Include="Views\Preguntas\Index.cshtml" />
+    <Content Include="Views\Preguntas\Edit.cshtml" />
     <None Include="Views\Temas\Create.cshtml" />
     <Content Include="Views\Temas\Edit.cshtml" />
     <Content Include="Views\Temas\Details.cshtml" />
