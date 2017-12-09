@@ -89,7 +89,7 @@ namespace web_application.Controllers
         {
             PreguntasBLL oBLL = new PreguntasBLL();
             Pregunta pregunta= oBLL.Retrieve(id);
-
+          
             return View(pregunta);
         }
 
@@ -99,5 +99,45 @@ namespace web_application.Controllers
             oBLL.Delete(id);
             return RedirectToAction("Index"); //redirecionar al index cuando borres
         }
+        
+
+        //Guarda y muesta la respuesta recien actualizada 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateRespuesta(Pregunta pregunta)
+        {
+
+            ViewBag.PreguntaID = pregunta.PreguntaID;
+            return View();
+        }
+
+        public ActionResult ShowNewRespuesta(Pregunta pregunta,Respuesta respuesta)
+        {
+            ActionResult Result;
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    RespuestasBLL oBLL = new RespuestasBLL();
+                    oBLL.Create(respuesta);
+
+                    RespuestasBLL listBLL = new RespuestasBLL();
+                    List<Respuesta> respuestas = listBLL.RetrieveAll();
+                    Result = PartialView("_ShowNewRespuesta",respuestas );
+                }
+                else
+                {
+                    Result = View(respuesta);
+                }
+                return Result;
+            }
+            catch (Exception e)
+            {
+                return View(respuesta);
+            }
+
+
+        }
+
     }
 }

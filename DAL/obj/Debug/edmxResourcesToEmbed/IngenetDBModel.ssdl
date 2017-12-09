@@ -18,6 +18,7 @@
     <Property Name="TituloPregunta" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ContenidoPregunta" Type="varchar(max)" Nullable="false" />
     <Property Name="Estado" Type="bit" Nullable="false" />
+    <Property Name="Creada" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="PreguntaTemas">
     <Key>
@@ -35,6 +36,7 @@
     <Property Name="ContenidoRespuesta" Type="varchar(max)" Nullable="false" />
     <Property Name="UsuarioID" Type="int" Nullable="false" />
     <Property Name="PreguntaID" Type="int" Nullable="false" />
+    <Property Name="Creada" Type="date" />
   </EntityType>
   <EntityType Name="Temas">
     <Key>
@@ -61,6 +63,7 @@
     <Property Name="Descripción" Type="varchar(max)" />
     <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Estatus" Type="int" />
+    <Property Name="Foto" Type="varbinary(max)" />
   </EntityType>
   <Association Name="FK_Estadisticas_Usuarios">
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />

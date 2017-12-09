@@ -26,6 +26,7 @@ namespace Entities
         public string TituloPregunta { get; set; }
         public string ContenidoPregunta { get; set; }
         public bool Estado { get; set; }
+        public System.DateTime Creada { get; set; }
     
         public virtual Usuario Usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

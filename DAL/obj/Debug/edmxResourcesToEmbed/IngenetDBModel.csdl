@@ -22,6 +22,7 @@
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Pregunta_Usuario" FromRole="Preguntas" ToRole="Usuarios" />
     <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Preguntas" ToRole="Respuestas" />
     <NavigationProperty Name="Temas" Relationship="Self.PreguntaTemas" FromRole="Preguntas" ToRole="Temas" />
+    <Property Name="Creada" Type="DateTime" Nullable="false" Precision="0" />
   </EntityType>
   <EntityType Name="Respuesta">
     <Key>
@@ -33,6 +34,7 @@
     <Property Name="PreguntaID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Pregunta" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Respuestas" ToRole="Preguntas" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Respuesta_Usuario" FromRole="Respuestas" ToRole="Usuarios" />
+    <Property Name="Creada" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Tema">
     <Key>
@@ -63,6 +65,7 @@
     <NavigationProperty Name="Estadisticas" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Usuarios" ToRole="Estadisticas" />
     <NavigationProperty Name="Preguntas" Relationship="Self.FK_Pregunta_Usuario" FromRole="Usuarios" ToRole="Preguntas" />
     <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuesta_Usuario" FromRole="Usuarios" ToRole="Respuestas" />
+    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_Estadisticas_Usuarios">
     <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />

@@ -36,6 +36,7 @@ namespace Entities
         public string Descripción { get; set; }
         public string Correo { get; set; }
         public Nullable<int> Estatus { get; set; }
+        public byte[] Foto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Estadistica> Estadisticas { get; set; }

@@ -18,6 +18,7 @@ namespace Entities
         public string ContenidoRespuesta { get; set; }
         public int UsuarioID { get; set; }
         public int PreguntaID { get; set; }
+        public Nullable<System.DateTime> Creada { get; set; }
     
         public virtual Pregunta Pregunta { get; set; }
         public virtual Usuario Usuario { get; set; }

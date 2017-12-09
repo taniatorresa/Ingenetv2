@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PreguntasBLL.cs" />
+    <Compile Include="RespuestasBLL.cs" />
     <Compile Include="TemasBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuariosBLL.cs" />

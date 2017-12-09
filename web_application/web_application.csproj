@@ -150,6 +150,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PreguntasController.cs" />
+    <Compile Include="Controllers\RespuestasController.cs" />
     <Compile Include="Controllers\TemasController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -178,6 +179,8 @@
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -189,6 +192,10 @@
     <Content Include="Views\Preguntas\Create.cshtml" />
     <Content Include="Views\Preguntas\Index.cshtml" />
     <Content Include="Views\Preguntas\Edit.cshtml" />
+    <Content Include="Views\Preguntas\Details.cshtml" />
+    <Content Include="Views\Preguntas\_CreateRespuesta.cshtml" />
+    <Content Include="Views\Preguntas\_ShowNewRespuesta.cshtml" />
+    <Content Include="Views\Respuestas\Create.cshtml" />
     <None Include="Views\Temas\Create.cshtml" />
     <Content Include="Views\Temas\Edit.cshtml" />
     <Content Include="Views\Temas\Details.cshtml" />

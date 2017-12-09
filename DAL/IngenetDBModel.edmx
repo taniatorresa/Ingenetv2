@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="IngenetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="IngenetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Estadisticas">
           <Key>
             <PropertyRef Name="EstadisticaID" />
@@ -23,6 +23,7 @@
           <Property Name="TituloPregunta" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ContenidoPregunta" Type="varchar(max)" Nullable="false" />
           <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="Creada" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="PreguntaTemas">
           <Key>
@@ -40,6 +41,7 @@
           <Property Name="ContenidoRespuesta" Type="varchar(max)" Nullable="false" />
           <Property Name="UsuarioID" Type="int" Nullable="false" />
           <Property Name="PreguntaID" Type="int" Nullable="false" />
+          <Property Name="Creada" Type="date" />
         </EntityType>
         <EntityType Name="Temas">
           <Key>
@@ -66,6 +68,7 @@
           <Property Name="Descripción" Type="varchar(max)" />
           <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Estatus" Type="int" />
+          <Property Name="Foto" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_Estadisticas_Usuarios">
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
@@ -171,8 +174,7 @@
             <End Role="Respuestas" EntitySet="Respuestas" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="IngenetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -198,6 +200,7 @@
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Pregunta_Usuario" FromRole="Preguntas" ToRole="Usuarios" />
           <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Preguntas" ToRole="Respuestas" />
           <NavigationProperty Name="Temas" Relationship="Self.PreguntaTemas" FromRole="Preguntas" ToRole="Temas" />
+          <Property Name="Creada" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="Respuesta">
           <Key>
@@ -209,6 +212,7 @@
           <Property Name="PreguntaID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Pregunta" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Respuestas" ToRole="Preguntas" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Respuesta_Usuario" FromRole="Respuestas" ToRole="Usuarios" />
+          <Property Name="Creada" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Tema">
           <Key>
@@ -239,6 +243,7 @@
           <NavigationProperty Name="Estadisticas" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Usuarios" ToRole="Estadisticas" />
           <NavigationProperty Name="Preguntas" Relationship="Self.FK_Pregunta_Usuario" FromRole="Usuarios" ToRole="Preguntas" />
           <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuesta_Usuario" FromRole="Usuarios" ToRole="Respuestas" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_Estadisticas_Usuarios">
           <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
@@ -338,6 +343,7 @@
           <EntitySetMapping Name="Preguntas">
             <EntityTypeMapping TypeName="IngenetModel.Pregunta">
               <MappingFragment StoreEntitySet="Preguntas">
+                <ScalarProperty Name="Creada" ColumnName="Creada" />
                 <ScalarProperty Name="PreguntaID" ColumnName="PreguntaID" />
                 <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
                 <ScalarProperty Name="TituloPregunta" ColumnName="TituloPregunta" />
@@ -349,6 +355,7 @@
           <EntitySetMapping Name="Respuestas">
             <EntityTypeMapping TypeName="IngenetModel.Respuesta">
               <MappingFragment StoreEntitySet="Respuestas">
+                <ScalarProperty Name="Creada" ColumnName="Creada" />
                 <ScalarProperty Name="RespuestaID" ColumnName="RespuestaID" />
                 <ScalarProperty Name="ContenidoRespuesta" ColumnName="ContenidoRespuesta" />
                 <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
@@ -367,6 +374,7 @@
           <EntitySetMapping Name="Usuarios">
             <EntityTypeMapping TypeName="IngenetModel.Usuario">
               <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
                 <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Rol" ColumnName="Rol" />
