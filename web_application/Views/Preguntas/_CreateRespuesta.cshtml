@@ -1,7 +1,7 @@
 ﻿@model Entities.Respuesta
 
 
-@using (Ajax.BeginForm("_ShowNewRespuesta", "Preguntas", null,
+@using (Ajax.BeginForm("ShowNewRespuesta", "Preguntas", null,
                                                              new AjaxOptions
                                                              {
                                                                  HttpMethod = "POST",
@@ -36,7 +36,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PreguntaID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PreguntaID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.PreguntaID, new { htmlAttributes = new { @class = "form-control", Value = ViewBag.PreguntaID } })
                 @Html.ValidationMessageFor(model => model.PreguntaID, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -49,29 +49,6 @@
     </div>
 }
 
-<div class="row">
-    <div class="col-md-12">
-        <div id="DetOrd">
 
-        </div>
-    </div>
-</div>
 
 <!-- instala en  nuget -->
-@section Scripts{
-    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-
-    <script>
-
-        function cerrar() {
-            alert('funcion cerrarda');
-        }
-        function error() {
-            alert('Error al cargar detalles de la compra');
-        }
-    </script>
-}

@@ -89,7 +89,8 @@ namespace web_application.Controllers
         {
             PreguntasBLL oBLL = new PreguntasBLL();
             Pregunta pregunta= oBLL.Retrieve(id);
-          
+            ViewBag.PreguntaID = id;
+
             return View(pregunta);
         }
 
@@ -122,7 +123,9 @@ namespace web_application.Controllers
                     oBLL.Create(respuesta);
 
                     RespuestasBLL listBLL = new RespuestasBLL();
-                    List<Respuesta> respuestas = listBLL.RetrieveAll();
+                    List<Respuesta> respuestas = listBLL.FilterRespuestasByPreguntaID(pregunta.PreguntaID);
+         
+
                     Result = PartialView("_ShowNewRespuesta",respuestas );
                 }
                 else

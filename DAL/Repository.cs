@@ -101,7 +101,16 @@ namespace DAL
 
         public List<TEntity> Filter(Expression<Func<TEntity, bool>> criteria)
         {
-            throw new NotImplementedException();
+            List<TEntity> Result = null;
+            try
+            {
+                Result = EntitySet.Where(criteria).ToList();
+            }
+            catch
+            {
+
+            }
+            return Result;
         }
 
         public void Dispose()

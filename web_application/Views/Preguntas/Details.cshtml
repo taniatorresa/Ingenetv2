@@ -46,6 +46,37 @@
 
     </dl>
 </div>
-<div>
- @Html.Partial("_CreateRespuesta" , new Entities.Respuesta())
+<div class="row">
+    <div class="col-md-12">
+        <div id="DetOrd">
+
+        </div>
+    </div>
 </div>
+
+<div>
+ @Html.Partial("_CreateRespuesta", new Entities.Respuesta())
+</div>
+
+<!-- instala en  nuget -->
+@section Scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+
+        function cerrar() {
+            alert('funcion cerrarda');
+            $("#entregado").prop("disabled", true);
+        }
+        function error() {
+            alert('Error al cargar productos');
+
+        }
+
+
+    </script>
+}

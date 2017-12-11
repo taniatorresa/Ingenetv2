@@ -69,6 +69,15 @@ namespace BLL
             }
             return Result;
         }
+        public List<Respuesta> FilterRespuestasByPreguntaID(int preguntaID)
+        {
+            List<Respuesta> Result = null;
+            using (var r = new Repository<Respuesta>())
+            {
+                Result = r.Filter(p => p.PreguntaID == preguntaID);
+            }
+            return Result;
+        }
 
         public bool Delete(int id)
         {

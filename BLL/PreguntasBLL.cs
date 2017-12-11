@@ -69,6 +69,7 @@ namespace BLL
             return Result;
         }
 
+ 
         public bool Delete(int id)
         {
             bool Result = false;
