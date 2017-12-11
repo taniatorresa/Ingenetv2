@@ -46,10 +46,13 @@
 
     </dl>
 </div>
+<div id="up">
+  @Html.Action("ShowRespuestas", "Preguntas")
+</div>
 <div class="row">
     <div class="col-md-12">
         <div id="DetOrd">
-
+   
         </div>
     </div>
 </div>
@@ -69,8 +72,8 @@
     <script>
 
         function cerrar() {
-            alert('funcion cerrarda');
-            $("#entregado").prop("disabled", true);
+            $('#up').hide(); //oculto mediante id
+       
         }
         function error() {
             alert('Error al cargar productos');

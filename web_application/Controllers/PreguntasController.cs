@@ -111,7 +111,12 @@ namespace web_application.Controllers
             ViewBag.PreguntaID = pregunta.PreguntaID;
             return View();
         }
-
+        public ActionResult ShowRespuestas(int id)
+        {
+            RespuestasBLL listBLL = new RespuestasBLL();
+            List<Respuesta> respuestas = listBLL.FilterRespuestasByPreguntaID(id);
+            return PartialView("_ShowRespuestas",respuestas);
+        }
         public ActionResult ShowNewRespuesta(Pregunta pregunta,Respuesta respuesta)
         {
             ActionResult Result;
@@ -121,11 +126,8 @@ namespace web_application.Controllers
                 {
                     RespuestasBLL oBLL = new RespuestasBLL();
                     oBLL.Create(respuesta);
-
                     RespuestasBLL listBLL = new RespuestasBLL();
-                    List<Respuesta> respuestas = listBLL.FilterRespuestasByPreguntaID(pregunta.PreguntaID);
-         
-
+                    List<Respuesta> respuestas = listBLL.FilterRespuestasByPreguntaID(pregunta.PreguntaID);        
                     Result = PartialView("_ShowNewRespuesta",respuestas );
                 }
                 else
