@@ -40,3 +40,33 @@ C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la c
 C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\BLL\obj\Debug\BLL.dll
 C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\BLL\obj\Debug\BLL.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\BLL.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\BLL.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\DAL.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Entities.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.Owin.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Owin.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\EntityFramework.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\DAL.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\DAL.dll.config
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Entities.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Entities.dll.config
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.Owin.xml
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\EntityFramework.xml
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\obj\Debug\BLL.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\obj\Debug\BLL.pdb
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\BLL.dll.config
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\RannFerii\Dropbox\7.- SEMESTR\t_programacion_VIII\ingenet_ultim_push_tania\Ingenet_fusion\ingenetv2\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml

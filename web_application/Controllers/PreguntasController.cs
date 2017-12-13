@@ -16,6 +16,16 @@ namespace web_application.Controllers
         {
             PreguntasBLL oBLL = new PreguntasBLL();
             List<Pregunta> preguntas = oBLL.RetrieveAll();
+
+            //ProductosBLL oBLL = new ProductosBLL();
+            //Producto producto = oBLL.Retrieve(id);
+
+            //CategoriasBLL mBLL = new CategoriasBLL();
+            //Categoria categoria = mBLL.Retrieve(producto.medidaId);
+            //ViewBag.idCategoria = categoria.categoria1;
+
+
+
             return View(preguntas);
         }
 
