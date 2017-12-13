@@ -26,3 +26,17 @@ C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\DAL
 C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\DAL\obj\Debug\DAL.dll
 C:\Users\tania\Documents\Septimo Semestre\taller de programación II\Ingenet\DAL\obj\Debug\DAL.pdb
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\DAL.dll.config
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\DAL.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\DAL.pdb
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\Entities.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\EntityFramework.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\Entities.pdb
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\Entities.dll.config
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\EntityFramework.xml
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\obj\Debug\DAL.dll
+C:\Users\tania\Documents\Septimo Semestre\taller de programación II\por si la cago\Ingenet\DAL\obj\Debug\DAL.pdb

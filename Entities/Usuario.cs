@@ -29,8 +29,8 @@ namespace Entities
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
         public string Contraseña { get; set; }
-        public Nullable<int> Sexo { get; set; }
-        public int Ocupacion { get; set; }
+        public int Sexo { get; set; }
+        public string Ocupacion { get; set; }
         public string Carrera { get; set; }
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
         public string Descripción { get; set; }

@@ -56,8 +56,8 @@
     <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
     <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
     <Property Name="Contraseña" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Sexo" Type="int" />
-    <Property Name="Ocupacion" Type="int" Nullable="false" />
+    <Property Name="Sexo" Type="int" Nullable="false" />
+    <Property Name="Ocupacion" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="FechaNacimiento" Type="date" />
     <Property Name="Descripción" Type="varchar(max)" />

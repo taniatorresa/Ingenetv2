@@ -61,8 +61,8 @@
           <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
           <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
           <Property Name="Contraseña" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Sexo" Type="int" />
-          <Property Name="Ocupacion" Type="int" Nullable="false" />
+          <Property Name="Sexo" Type="int" Nullable="false" />
+          <Property Name="Ocupacion" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="FechaNacimiento" Type="date" />
           <Property Name="Descripción" Type="varchar(max)" />
@@ -233,8 +233,8 @@
           <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Contraseña" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Sexo" Type="Int32" />
-          <Property Name="Ocupacion" Type="Int32" Nullable="false" />
+          <Property Name="Sexo" Type="Int32" Nullable="false" />
+          <Property Name="Ocupacion" Type="String" Nullable="false" />
           <Property Name="Carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
           <Property Name="Descripción" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
