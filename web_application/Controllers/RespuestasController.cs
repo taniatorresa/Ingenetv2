@@ -102,6 +102,8 @@ namespace web_application.Controllers
             oBLL.Delete(id);
             return RedirectToAction("Index"); //redirecionar al index cuando borres
         }
-    
-}
+
+       
+
+    }
 }

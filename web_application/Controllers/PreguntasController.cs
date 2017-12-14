@@ -154,5 +154,32 @@ namespace web_application.Controllers
 
         }
 
+        public string Getknownull(int id)
+        {
+            UsuariosBLL mBLL = new UsuariosBLL();
+            Usuario usuario = mBLL.Retrieve(id);
+            var foto = usuario.Foto;
+            ViewBag.getnull = foto;
+            if (foto != null)
+            {
+                return "true";
+            }
+            else
+            {
+                return "false";
+            }
+
+
+        }
+
+        public string Getusuario(int id)
+        {
+            UsuariosBLL mBLL = new UsuariosBLL();
+            Usuario usuario = mBLL.Retrieve(id);
+            var name = usuario.UserName;
+
+            return name;
+        }
+
     }
 }

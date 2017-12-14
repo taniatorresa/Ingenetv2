@@ -153,5 +153,27 @@ namespace web_application.Controllers
             
             return PartialView(usuario);
         }
+
+
+      
+
+
+        public FileStreamResult Getknowimage(int id)
+        {
+            UsuariosBLL oBLL = new UsuariosBLL();
+            Usuario usuario = oBLL.Retrieve(id);
+            var bytes = usuario.Foto;
+            var nuled = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
+            if (bytes != null)
+            {
+                return File(new MemoryStream(bytes, 0, bytes.Length), "image/jpeg");
+            }
+            else
+            {
+                return File(new MemoryStream(nuled, 0, 0), "image/jpeg");
+            }
+
+        }
+
     }
 }
