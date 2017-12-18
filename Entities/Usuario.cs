@@ -32,10 +32,10 @@ namespace Entities
         public int Sexo { get; set; }
         public string Ocupacion { get; set; }
         public string Carrera { get; set; }
-        public Nullable<System.DateTime> FechaNacimiento { get; set; }
+        public System.DateTime FechaNacimiento { get; set; }
         public string Descripción { get; set; }
         public string Correo { get; set; }
-        public Nullable<int> Estatus { get; set; }
+        public int Estatus { get; set; }
         public byte[] Foto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

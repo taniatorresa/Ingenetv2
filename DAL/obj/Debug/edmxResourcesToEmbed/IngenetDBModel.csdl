@@ -8,7 +8,7 @@
     <Property Name="UsuarioID" Type="Int32" Nullable="false" />
     <Property Name="PreguntasRealizadas" Type="Int32" Nullable="false" />
     <Property Name="RespuestasRealizadas" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Usuario" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Estadisticas" ToRole="Usuarios" />
+    <NavigationProperty Name="Usuario" Relationship="IngenetModel.FK_Estadisticas_Usuarios" FromRole="Estadistica" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Pregunta">
     <Key>
@@ -19,10 +19,10 @@
     <Property Name="TituloPregunta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ContenidoPregunta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Estado" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Usuario" Relationship="Self.FK_Pregunta_Usuario" FromRole="Preguntas" ToRole="Usuarios" />
     <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Preguntas" ToRole="Respuestas" />
     <NavigationProperty Name="Temas" Relationship="Self.PreguntaTemas" FromRole="Preguntas" ToRole="Temas" />
     <Property Name="Creada" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Usuario" Relationship="IngenetModel.FK_Pregunta_Usuario" FromRole="Pregunta" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Respuesta">
     <Key>
@@ -33,8 +33,8 @@
     <Property Name="UsuarioID" Type="Int32" Nullable="false" />
     <Property Name="PreguntaID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Pregunta" Relationship="Self.FK_Respuesta_Pregunta" FromRole="Respuestas" ToRole="Preguntas" />
-    <NavigationProperty Name="Usuario" Relationship="Self.FK_Respuesta_Usuario" FromRole="Respuestas" ToRole="Usuarios" />
     <Property Name="Creada" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Usuario" Relationship="IngenetModel.FK_Respuesta_Usuario" FromRole="Respuesta" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Tema">
     <Key>
@@ -44,53 +44,6 @@
     <Property Name="NombreTema" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Preguntas" Relationship="Self.PreguntaTemas" FromRole="Temas" ToRole="Preguntas" />
   </EntityType>
-  <EntityType Name="Usuario">
-    <Key>
-      <PropertyRef Name="UsuarioID" />
-    </Key>
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Rol" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Contraseña" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Sexo" Type="Int32" Nullable="false" />
-    <Property Name="Ocupacion" Type="String" Nullable="false" />
-    <Property Name="Carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
-    <Property Name="Descripción" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estatus" Type="Int32" />
-    <NavigationProperty Name="Estadisticas" Relationship="Self.FK_Estadisticas_Usuarios" FromRole="Usuarios" ToRole="Estadisticas" />
-    <NavigationProperty Name="Preguntas" Relationship="Self.FK_Pregunta_Usuario" FromRole="Usuarios" ToRole="Preguntas" />
-    <NavigationProperty Name="Respuestas" Relationship="Self.FK_Respuesta_Usuario" FromRole="Usuarios" ToRole="Respuestas" />
-    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <Association Name="FK_Estadisticas_Usuarios">
-    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
-    <End Role="Estadisticas" Type="Self.Estadistica" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuarios">
-        <PropertyRef Name="UsuarioID" />
-      </Principal>
-      <Dependent Role="Estadisticas">
-        <PropertyRef Name="UsuarioID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Pregunta_Usuario">
-    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
-    <End Role="Preguntas" Type="Self.Pregunta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuarios">
-        <PropertyRef Name="UsuarioID" />
-      </Principal>
-      <Dependent Role="Preguntas">
-        <PropertyRef Name="UsuarioID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Respuesta_Pregunta">
     <End Role="Preguntas" Type="Self.Pregunta" Multiplicity="1" />
     <End Role="Respuestas" Type="Self.Respuesta" Multiplicity="*" />
@@ -103,18 +56,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Respuesta_Usuario">
-    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
-    <End Role="Respuestas" Type="Self.Respuesta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuarios">
-        <PropertyRef Name="UsuarioID" />
-      </Principal>
-      <Dependent Role="Respuestas">
-        <PropertyRef Name="UsuarioID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="PreguntaTemas">
     <End Role="Preguntas" Type="Self.Pregunta" Multiplicity="*" />
     <End Role="Temas" Type="Self.Tema" Multiplicity="*" />
@@ -124,26 +65,85 @@
     <EntitySet Name="Preguntas" EntityType="Self.Pregunta" />
     <EntitySet Name="Respuestas" EntityType="Self.Respuesta" />
     <EntitySet Name="Temas" EntityType="Self.Tema" />
-    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
-    <AssociationSet Name="FK_Estadisticas_Usuarios" Association="Self.FK_Estadisticas_Usuarios">
-      <End Role="Usuarios" EntitySet="Usuarios" />
-      <End Role="Estadisticas" EntitySet="Estadisticas" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Pregunta_Usuario" Association="Self.FK_Pregunta_Usuario">
-      <End Role="Usuarios" EntitySet="Usuarios" />
-      <End Role="Preguntas" EntitySet="Preguntas" />
-    </AssociationSet>
     <AssociationSet Name="FK_Respuesta_Pregunta" Association="Self.FK_Respuesta_Pregunta">
       <End Role="Preguntas" EntitySet="Preguntas" />
-      <End Role="Respuestas" EntitySet="Respuestas" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Respuesta_Usuario" Association="Self.FK_Respuesta_Usuario">
-      <End Role="Usuarios" EntitySet="Usuarios" />
       <End Role="Respuestas" EntitySet="Respuestas" />
     </AssociationSet>
     <AssociationSet Name="PreguntaTemas" Association="Self.PreguntaTemas">
       <End Role="Preguntas" EntitySet="Preguntas" />
       <End Role="Temas" EntitySet="Temas" />
     </AssociationSet>
+    <EntitySet Name="Usuarios" EntityType="IngenetModel.Usuario" />
+    <AssociationSet Name="FK_Estadisticas_Usuarios" Association="IngenetModel.FK_Estadisticas_Usuarios">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Estadistica" EntitySet="Estadisticas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pregunta_Usuario" Association="IngenetModel.FK_Pregunta_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Pregunta" EntitySet="Preguntas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuesta_Usuario" Association="IngenetModel.FK_Respuesta_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Respuesta" EntitySet="Respuestas" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Rol" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Nombres" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoPaterno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoMaterno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contraseña" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Sexo" Type="Int32" Nullable="false" />
+    <Property Name="Ocupacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Carrera" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Descripción" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estatus" Type="Int32" Nullable="false" />
+    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Estadisticas" Relationship="IngenetModel.FK_Estadisticas_Usuarios" FromRole="Usuario" ToRole="Estadistica" />
+    <NavigationProperty Name="Preguntas" Relationship="IngenetModel.FK_Pregunta_Usuario" FromRole="Usuario" ToRole="Pregunta" />
+    <NavigationProperty Name="Respuestas" Relationship="IngenetModel.FK_Respuesta_Usuario" FromRole="Usuario" ToRole="Respuesta" />
+  </EntityType>
+  <Association Name="FK_Estadisticas_Usuarios">
+    <End Type="IngenetModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="IngenetModel.Estadistica" Role="Estadistica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Estadistica">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pregunta_Usuario">
+    <End Type="IngenetModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="IngenetModel.Pregunta" Role="Pregunta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Pregunta">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuesta_Usuario">
+    <End Type="IngenetModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="IngenetModel.Respuesta" Role="Respuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Respuesta">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

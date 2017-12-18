@@ -16,7 +16,7 @@ namespace BLL
             using (var r = new Repository<Usuario>())
             {
                 Usuario tmp = r.Retrieve(
-                    p => p.UserName == usuario.UserName);
+                    p => p.UserName == usuario.UserName || p.Correo == usuario.Correo);
                 if (tmp == null)
                 {
                     Result = r.Create(usuario);
