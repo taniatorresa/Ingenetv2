@@ -53,16 +53,16 @@
     <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Rol" Type="varchar" MaxLength="5" Nullable="false" />
     <Property Name="Nombres" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
-    <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+    <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Contraseña" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Sexo" Type="int" Nullable="false" />
     <Property Name="Ocupacion" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="FechaNacimiento" Type="date" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
     <Property Name="Descripción" Type="varchar(max)" />
     <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Estatus" Type="int" />
+    <Property Name="Estatus" Type="int" Nullable="false" />
     <Property Name="Foto" Type="varbinary(max)" />
   </EntityType>
   <Association Name="FK_Estadisticas_Usuarios">

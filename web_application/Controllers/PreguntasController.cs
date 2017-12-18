@@ -8,26 +8,28 @@ using System.Web.Mvc;
 
 namespace web_application.Controllers
 {
+   
     public class PreguntasController : Controller
     {
-        // GET: Preguntas
-        // GET: Categorias
+       
         public ActionResult Index()
         {
             PreguntasBLL oBLL = new PreguntasBLL();
             List<Pregunta> preguntas = oBLL.RetrieveAll();
-
-            //ProductosBLL oBLL = new ProductosBLL();
-            //Producto producto = oBLL.Retrieve(id);
-
-            //CategoriasBLL mBLL = new CategoriasBLL();
-            //Categoria categoria = mBLL.Retrieve(producto.medidaId);
-            //ViewBag.idCategoria = categoria.categoria1;
-
-
+          
 
             return View(preguntas);
         }
+        public ActionResult IndexNotificacion(int id)
+        {
+            
+            PreguntasBLL oBLL = new PreguntasBLL();
+            List<Pregunta> preguntas = oBLL.RetrieveAll();
+            ViewBag.notificacion= id;
+            return View(preguntas);
+            
+        }
+
 
         public ActionResult Create()
         {
